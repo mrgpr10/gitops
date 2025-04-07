@@ -1,0 +1,24 @@
+name: Deploy Static Site
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout code
+        uses: actions/checkout@v2
+
+      - name: 📁 Setup Node (optional)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 📤 Deploy to Render
+        run: echo "Pretend we're deploying your code!"
+
+        # You could put actual deploy scripts here,
+        # or trigger Render's deploy webhook (see below)
