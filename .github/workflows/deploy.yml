@@ -2,7 +2,7 @@ name: Deploy to Render on Push
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   deploy:
